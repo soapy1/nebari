@@ -69,7 +69,7 @@ jobs:
         with:
           aws_region: ${{ env.AWS_DEFAULT_REGION }}
           aws_role_to_assume: ${{ secrets.AWS_ROLE_ARN }}
-          cloudflare_token: ${{ secrets.CLOUDFLARE_TOKEN }}
+          cloudflare_token: placeholder
 
       - name: Deploy Nebari
         working-directory: ${{ steps.init.outputs.directory }}
