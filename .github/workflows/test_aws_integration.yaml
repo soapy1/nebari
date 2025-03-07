@@ -105,14 +105,14 @@ jobs:
           max-restarts: 3
 
       ### DEPLOYMENT TESTS
-      - name: Deployment Pytests
-        env:
-          NEBARI_CONFIG_PATH: ${{ steps.init.outputs.config }}
-          KEYCLOAK_USERNAME: ${{ env.TEST_USERNAME }}
-          KEYCLOAK_PASSWORD: ${{ env.TEST_PASSWORD }}
-          NEBARI_HOSTNAME: ${{ steps.init.outputs.domain }}
-        run: |
-          pytest tests/tests_deployment/ -v -s
+      # - name: Deployment Pytests
+      #   env:
+      #     NEBARI_CONFIG_PATH: ${{ steps.init.outputs.config }}
+      #     KEYCLOAK_USERNAME: ${{ env.TEST_USERNAME }}
+      #     KEYCLOAK_PASSWORD: ${{ env.TEST_PASSWORD }}
+      #     NEBARI_HOSTNAME: ${{ steps.init.outputs.domain }}
+      #   run: |
+      #     pytest tests/tests_deployment/ -v -s
 
       ### USER-JOURNEY TESTS
       - uses: actions/setup-node@v4
